@@ -25,7 +25,7 @@
         public bool CanExecute(object parameter)
         {
             return !this.isRunning &&
-                   canExecute((T)parameter);
+                   this.canExecute((T)parameter);
         }
 
         public async void Execute(object parameter)

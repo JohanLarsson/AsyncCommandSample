@@ -30,7 +30,7 @@
             }
 
             return !this.isRunning &&
-                   canExecute();
+                   this.canExecute();
         }
 
         public async void Execute(object parameter)

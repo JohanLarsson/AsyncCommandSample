@@ -36,7 +36,7 @@
             }
 
             return this.cts?.IsCancellationRequested == false &&
-                   canExecute();
+                   this.canExecute();
         }
 
         public async void Execute(object parameter)
@@ -49,7 +49,7 @@
             try
             {
                 this.cts = new CancellationTokenSource();
-                await this.execute(cts.Token);
+                await this.execute(this.cts.Token);
             }
             finally
             {
